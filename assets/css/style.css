@@ -1,0 +1,286 @@
+/* Author: Yasaman Mirvahabi Sabet, 101217770*/
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .header{
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        display: grid;
+        grid-template-columns: 9fr 3.25fr;
+        align-items: center;
+        margin: 15px;
+        padding: 15px;
+    }
+    .header p{
+        color: rgb(255, 7, 7, 0.767);
+        font-size: 28px;
+        font-family: 'Architects Daughter', cursive;
+    }
+    .header a{
+        color: black;
+        text-decoration: none;
+    }
+    .social{
+        display: flex;
+        flex-direction: row;
+    }
+    .header ul{
+        list-style: none;
+    }
+    .header img{
+        height: 30px;
+        width: 30px;
+        padding: 0 15px;
+    }
+    .navigation{
+        margin: 0 15px;
+        display: grid;
+        grid-template-columns: 8fr 4fr;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #logo img{
+        height: 80px;
+        width: 80px;
+        padding: 8px;
+    }
+    #links li{
+        list-style: none;
+        display: inline-block;
+        padding: 10px;
+    }
+    #links a{
+        font-family: 'Rozha One', serif;
+        font-size: 1.2em;
+        text-decoration: none;
+        color: black;
+        text-align: center;
+    }
+    #links a:hover{
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 0, 0);
+        padding: 8px;
+        font-size: 20px;
+    }
+    #links a:active{
+        background-color: rgb(229, 255, 0);
+        color: rgb(0, 0, 0);
+    }
+    .current{
+        background-color: rgb(201, 15, 15);
+        padding: 10px;
+        }
+    #hero-item img{
+        margin: 10px;
+        /* width: 1495px;
+        height: 1000px; */
+        width: 98.5%;
+    }
+    #hero-text{
+        max-width: 30%;
+        position: absolute;
+        top: 70%;
+        left: 30px;
+        background-color: rgb(0, 0, 0, .8);  
+        padding: 90px 40px;
+    }
+    div#hero-text>p{
+        color: rgb(148, 147, 147);
+        font-family: 'Zilla Slab', serif;
+        margin-bottom: 10px;
+    }
+    #hero-text h1{
+        font-size: 50px;
+        font-family: 'Oswald', sans-serif;
+        color: rgb(187, 9, 9);
+    }
+    .button{
+        font-family: 'Rozha One', serif;
+        font-size: 1.3em;
+        background-color: rgba(255, 255, 255, 0.37);
+        display: block;
+        border: none;
+        border-radius: 5px;
+        color: rgb(255, 36, 36);
+        text-align: center;
+        padding: 10px 0;
+        text-decoration: none;
+        width: 140px;
+        margin-top: 25px;
+    }
+    i{
+        color: rgb(255, 219, 119);
+        font-size: 50px;
+    }
+    .features{
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+        height: 350px;
+        display: grid;
+        grid-template-columns: repeat(4, 4fr);
+        grid-template-areas: 
+        "top top top top"
+        "a b c d";
+        grid-row-gap: 4em;
+        justify-items: center;
+        grid-column-gap: .75em;
+    }
+    .features h2{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 40px;
+        grid-area: top;
+        color: rgb(187, 9, 9);
+    }
+    .f1{
+        grid-area: a;
+    }
+    .f2{
+        grid-area: b;
+    }
+    .f3{
+        grid-area: c;
+    }
+    .f4{
+        grid-area: d;
+    }
+    div>h3{
+        font-family: 'Rozha One', serif;
+        margin: 10px 0;
+    }
+
+    h3~p {
+        line-height: 1.5em;
+    }
+    .testimonial{
+        width: 100%;
+        text-align: center;
+        margin-top: 100px;
+        height: 350px;
+        display: grid;
+        grid-template-columns: repeat(3, 3fr);
+        grid-template-areas: 
+        "t t t"
+        "a b c";
+        grid-row-gap: 4em;
+        justify-content: center;
+        grid-column-gap: 1em;
+        align-items: center;
+        justify-items: center;
+    }
+    .column img {
+        height: 100px;
+        width: 100px;
+        border: none;
+        border-radius: 50%;
+    } 
+    .column{
+        padding: 25px;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+        width: 60%;
+    }
+
+    .testimonial h2{
+        font-family: 'Permanent Marker', cursive;
+        font-size: 40px;
+        color: rgb(187, 9, 9);
+        grid-area: t;
+    }
+    .t1{
+        grid-area: a;
+    }
+    .t2{
+        grid-area: b;
+    }
+    .t3{
+        grid-area: c;
+    }
+    img+h4 {
+        font-family: 'Fruktur', cursive;
+        color: rgb(204, 223, 35);
+        font-size: 25px;
+    }
+    div h5{
+        margin-bottom: 10px;
+    }
+    .column p{
+        font-family: 'Zilla Slab', serif;
+    }
+    footer{
+        height: 200px;
+    }
+    @media screen and (max-device-width:600px) {
+        .header{
+            grid-template-areas: 
+            "1 1"
+            "2 2";
+        }
+        .social{
+            grid-area: 1;
+        }
+        .header p{
+            grid-area: 2;
+            font-size: 14px;
+        }
+        .navigation{
+            grid-template-columns: 1fr 4fr;
+        }
+        #links li{
+            display: flex;
+            flex-direction: column;
+            padding: 2px;
+        }
+        #hero-text{
+            top: 45%;
+            left: 15px;
+            padding: 5px;
+        }
+        #hero-text h1{
+            font-size: 16px;
+        }
+        #hero-text p{
+            font-size: 8px;
+            margin: 0;
+        }
+        .button{
+            font-size: 10px;
+            padding: 2px;
+            width: 50px;
+            margin: 0;
+        }
+        i{
+            font-size: 30px;
+        }
+        .features{
+            margin-top: 60px;
+        }
+        .features h3{
+            font-size: 12px;
+        }
+        h3~p{
+            line-height: 1em;
+            font-size: 8px;
+        }
+        .testimonial{
+            margin-top: 60px;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+            "t t t" 
+            "a a a"
+            "b b b"
+            "c c c";
+        }
+        .t1{
+            grid-area: a;
+        }
+        .t2{
+            grid-area: b;
+        }
+        .t3{
+            grid-area: c;
+        }
+        footer{
+            height: 1150px;
+        }
+    }
